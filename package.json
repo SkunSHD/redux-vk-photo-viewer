@@ -1,0 +1,11 @@
+{
+  "name": "redux-first-app",
+  "version": "1.0.0",
+  "description": "Lerning example",
+  "main": "index.js",
+  "scripts": {
+     "start": "node server.js"
+  },
+  "author": "Maliutenko_D",
+  "license": "MIT"
+}
