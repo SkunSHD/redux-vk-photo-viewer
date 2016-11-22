@@ -4,7 +4,7 @@ var autoprefixer = require('autoprefixer')
 var precss = require('precss')
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'cheap-inline-module-source-map',
   entry: [
     'react-hot-loader/patch',
     'webpack-hot-middleware/client',
