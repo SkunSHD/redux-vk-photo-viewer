@@ -1,8 +1,7 @@
 import {
   LOGIN_REQUEST,
   LOGIN_SUCCES,
-  LOGIN_FAIL,
-  LOGIN_STATUS
+  LOGIN_FAIL
 } from '../constants/User'
 
 export function handleLogin() {
@@ -29,26 +28,6 @@ export function handleLogin() {
           payload: new Error('Ошибка авторизации')
         })
       }
-    }, 4); // запрос прав на доступ к photo
-  }
-
-}
-
-export function loginStatus() {
-
-  return function(dispatch) {
-    dispatch({
-      type: LOGIN_STATUS
-    })
-
-    window.VK.Auth.getLoginStatus((r) => {
-      if (r.status == 'connected' && r.session.user) {
-        let username = r.session.user.first_name;     
-          dispatch({
-          type: LOGIN_SUCCES,
-          payload: username
-        })
-      }
-    })
+    }, 4);
   }
 }
