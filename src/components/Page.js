@@ -1,17 +1,17 @@
 import React, { PropTypes, Component } from 'react'
 
+const years = [2016,2015,2014,2013,2012,2011,2010]
+ 
 export default class Page extends Component {
   
   onYearBtnClick = (e) => {
     this.props.getPhotos(+e.target.innerText)
   }
   
-  // юзер кликнул - действие вызвалось - редьюсер изменил состояние - компонент отрисовал изменения
   render() {
     const { year, photos, fetching, error } = this.props
-    const years = [2016,2015,2014,2013,2012,2011,2010]
-
-    return (<div className='ib page'>
+    
+    return <div className='ib page'>
         <p>
           { years.map((item, index) => <button className='btn' key={index} onClick={this.onYearBtnClick}>{item}</button>) }
         </p>
@@ -29,8 +29,7 @@ export default class Page extends Component {
               </div>
             )
         }
-      </div>
-    )
+      </div>   
   }
 }
 
