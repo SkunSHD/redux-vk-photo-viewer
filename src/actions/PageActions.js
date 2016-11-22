@@ -4,24 +4,6 @@ import {
     GET_PHOTOS_FAIL,
 } from '../constants/Page'
 
-// любое действие пользователя == отправка действия/dispatch actions
-
-// Как вращаются данные внутри redux-приложения:
-    // Приложение получило изначальное состояние (initial state)
-    // Пользователь нажав кнопку, отправил действие (dispatch action)
-    // Соответсвующий редьюсер обновил часть приложения, в согласии с тем, что узнал от действия.
-    // Приложение изменилось и теперь отражает новое состояние.
-    // ... (все повторяется по кругу, с пункта 2)
-// Это и есть однонаправленный поток данных. --->> --->> --->>
-
-// Усилитель: redux-thunk выглядит так:
-// function thunkMiddleware({ dispatch, getState }) {
-//   return next => action =>
-//     typeof action === 'function' ?
-//       action(dispatch, getState) :
-//       next(action);
-// }
-
 let photosArr = []
 let cached = false
 
