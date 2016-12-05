@@ -17,7 +17,7 @@ export default class Page extends Component {
         </p>
         <h3>{year} год</h3>
         { error ? <p className='error'>Во время загрузки фото произошла ошибка</p> : '' }
-        { fetching ? '' : <p>ПтыщЬ! Подтянуто {photos.length} фоток!.</p> }
+        { fetching ? '' : <p>Загружено {photos.length} фотографий.</p> }
         {
           fetching ?
             <p>Загрузка...</p>
